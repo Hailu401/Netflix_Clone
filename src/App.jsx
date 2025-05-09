@@ -1,18 +1,13 @@
 import react from 'react'
-import Header from './Component/Header/Header'
-import Footer from './Component/Footer/Footer'
+import Home from './Pages/Home'
 
 function App() {
  
 
   return (
     <>
-     <div>
-      <Header/>
-      <Footer/>
-
-     </div>
-        
+      <Home/>
+       
     </>
   )
 }
