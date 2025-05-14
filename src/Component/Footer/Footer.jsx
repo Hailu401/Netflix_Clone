@@ -20,13 +20,13 @@ function Footer() {
               <li>Legal Notes</li>
             </ul>
           </div>
-          <di>
+          <div>
             <ul>
               <li>Help Center</li>
               <li>Jobs</li>
               <li>Cookie Preferances</li>
             </ul>
-          </di>
+          </div>
           <div>
             <ul>
               <li>Gift Cards</li>
