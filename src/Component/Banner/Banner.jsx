@@ -11,7 +11,7 @@ function Banner() {
     (async ()=>{
         try {
             const request = await Axios.get(requests.getNetflixAllMovies);
-            console.log(request.data.results);
+            // console.log(request.data.results);
             setMovie(request.data.results[Math.floor(Math.random() * request.data.results.length)])
         } catch (error) {
             console.log(`Something went wrong>>>>`, error);
