@@ -22,7 +22,7 @@ useEffect(()=>{
 },[getData])
 // console.log(movie);
 
-const handleClick = (movie)=>{
+  const handleClick = (movie)=>{
     if(trailerUrl){
         setTrailerUrl('')
     }else{
@@ -48,7 +48,7 @@ const opts = {
       <h1>{title}</h1>
       <div className="row_posters">
         {movie?.map((movie, i) => (
-          <>
+          < >
             <img
               onClick={() => handleClick(movie)}
               key={i}
@@ -58,13 +58,13 @@ const opts = {
               alt={movie.name}
               className={`row_poster ${isLarge && "row_posterLarge"}`}
             />
-            {/* <p className='movie_name'>{movie.name}</p> */}
+            {/* <p className='movie_name'>{movie.title}</p> */}
           </>
         ))}
       </div>
-      <div style={{ padding: "40px" }}>
+      {/* <div style={{ padding: "40px" }}>
         {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -5,7 +5,7 @@ import requests from '../../../Utils/Request';
 
 const RowList = () => {
   return (
-    <div>
+    <div className='row_list'>
       <Row
         title="NETFLIX ORGINALS"
         getData={requests.getNetflixAllMovies}

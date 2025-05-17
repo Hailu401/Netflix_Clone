@@ -5,12 +5,18 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 function Footer() {
   return (
-    <div className='footer_outer_container'>
+    <div className="footer_outer_container">
       <div className="footer_inner_container">
         <div className="footer_icons">
-          <FacebookOutlinedIcon/>
-          <InstagramIcon/>
-          <YouTubeIcon/>
+          <span>
+            <FacebookOutlinedIcon />
+          </span>
+          <span>
+            <InstagramIcon />
+          </span>
+          <span>
+            <YouTubeIcon />
+          </span>
         </div>
         <div className="footer_data">
           <div>
@@ -45,9 +51,7 @@ function Footer() {
         <div className="service_code">
           <p>Service Code</p>
         </div>
-        <div className="copy_write">
-          &copy; 1997-2025 Netflix, Inc.
-        </div>
+        <div className="copy_write">&copy; 1997-2025 Netflix, Inc.</div>
       </div>
     </div>
   );
