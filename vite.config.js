@@ -7,5 +7,5 @@ export default defineConfig({
   server: {
     port: 30111
   },
-  base: /Netflix_clone/
+  base: '/Netflix_clone/'
 })
