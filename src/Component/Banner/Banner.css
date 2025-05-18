@@ -16,11 +16,12 @@ object-fit: contain;
 }
 .banner_description{
     width: 25rem;
-    line-height: 1;
-    padding: 1rem 0;
+    line-height: 1.25;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
     font-size: 1rem;
     max-width: 368px;
-    height: 10px;
+    height: 20px;
 }
 .banner_button{
     cursor: pointer;
@@ -47,6 +48,7 @@ object-fit: contain;
 .banner_fadeButtom{
     height: 40vh;
     background-image: linear-gradient(360deg, transparent, rgb(37, 37, 37, 0.91), #111);
+    
 }
 @media screen and (max-width: 768px) {
     .banner {
