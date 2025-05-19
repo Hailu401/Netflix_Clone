@@ -52,7 +52,7 @@ object-fit: contain;
 }
 @media  (max-width: 768px) {
     .banner {
-     height: 30vh;
+     height: 35vh;
      padding-bottom: 10px;
     
     }
