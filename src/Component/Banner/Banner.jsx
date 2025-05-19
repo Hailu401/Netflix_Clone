@@ -8,7 +8,7 @@ function Banner() {
     const [movie, setMovie] = useState({});
 
     useEffect(()=>{
-    (async ()=>{
+   const fetch = async ()=>{
         try {
             const request = await Axios.get(requests.getNetflixAllMovies);
             // console.log(request.data.results);
@@ -16,7 +16,8 @@ function Banner() {
         } catch (error) {
             console.log(`Something went wrong>>>>`, error);
         }
-    })()
+    }
+    fetch()
     }, [])
     // console.log(movie);
     function truncate(str, n){

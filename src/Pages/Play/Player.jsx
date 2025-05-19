@@ -40,7 +40,13 @@ console.log(video);
   return (
     <>
       <div className="player">
-        <img src={back_arrow} alt="" onClick={()=>{navigate("/Netflix_Clone/");}}/>
+        <img
+          src={back_arrow}
+          alt=""
+          onClick={() => {
+            navigate("/Netflix_Clone/");
+          }}
+        />
         <iframe
           src={`https://www.youtube.com/embed/${video.key}`}
           frameborder="0"
@@ -50,7 +56,7 @@ console.log(video);
           allowFullScreen
         ></iframe>
         <div className="movie_info1">
-          <p>Published Date: {PDate?.slice(0,10)}</p>
+          <p>Published Date: {PDate?.slice(0, 10)}</p>
           <p>Movie Name: {video.name}</p>
           <p>Type: {video.type}</p>
         </div>
