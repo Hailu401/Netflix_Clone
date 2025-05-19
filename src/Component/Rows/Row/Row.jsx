@@ -3,11 +3,14 @@ import './Row.css'
 import axios from '../../../Utils/Axios';
 import movieTrailer from 'movie-trailer';
 import YouTube from 'react-youtube';
+import { Link, useParams } from 'react-router-dom';
+
 
 const Row = ({title, getData, isLarge}) => {
     const [movie, setMovie] = useState([]);
     const [trailerUrl, setTrailerUrl] = useState("");
     const BaseImage_url = 'https://image.tmdb.org/t/p/original'
+    
 useEffect(()=>{
 (async ()=>{
     try {
@@ -22,35 +25,35 @@ useEffect(()=>{
 },[getData])
 // console.log(movie);
 
-  const handleClick = (movie)=>{
-    if(trailerUrl){
-        setTrailerUrl('')
-    }else{
-        movieTrailer(movie?.title || movie?.original_name ).then((url)=>{
-            console.log(url);
-            const urlParams = new URLSearchParams(new URL(url).search)
-            console.log(urlParams);
-            console.log(urlParams.get('v'));
-            setTrailerUrl(urlParams.get('v'))
-        })
-    }
-}
+//   const handleClick = (movie)=>{
+//     if(trailerUrl){
+//         setTrailerUrl('')
+//     }else{
+//         movieTrailer(movie?.title || movie?.original_name ).then((url)=>{
+//             console.log(url);
+//             const urlParams = new URLSearchParams(new URL(url).search)
+//             console.log(urlParams);
+//             console.log(urlParams.get('v'));
+//             setTrailerUrl(urlParams.get('v'))
+//         })
+//     }
+// }
 
-const opts = {
-  height: "390",
-  width: "100%",
-  playerVars: {
-    autoplay: 1,
-  },
-};
+// const opts = {
+//   height: "390",
+//   width: "100%",
+//   playerVars: {
+//     autoplay: 1,
+//   },
+// };
   return (
     <div className="row">
       <h1>{title}</h1>
       <div className="row_posters">
         {movie?.map((movie, i) => (
-          < >
+          <Link to={`/Netflix_Clone/player/${movie.id}`}>
             <img
-              onClick={() => handleClick(movie)}
+              // onClick={() => handleClick(movie)}
               key={i}
               src={`${BaseImage_url}${
                 isLarge ? movie.poster_path : movie.backdrop_path
@@ -58,8 +61,8 @@ const opts = {
               alt={movie.name}
               className={`row_poster ${isLarge && "row_posterLarge"}`}
             />
-            {/* <p className='movie_name'>{movie.title}</p> */}
-          </>
+           
+          </Link>
         ))}
       </div>
       {/* <div style={{ padding: "40px" }}>

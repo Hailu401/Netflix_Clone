@@ -1,0 +1,51 @@
+.player{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.player img{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    cursor: pointer;
+    color: #fff;  
+}
+.player iframe{
+    margin-left: 5px;
+    border-radius: 10px;
+}
+.movie_info1{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+.movie_info1 p{
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 20px;
+}
+@media (max-width: 768px) {
+    .player img{
+        width: 25px;
+        top: 20px;
+        left: 10px;
+    }
+    .player iframe{
+        height: 30vh;
+        margin-top: -30vh;
+    }
+    .movie_info1{
+        margin: 10px 0;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+    .movie_info1 p{
+        font-size: 0.75rem;
+        padding: 5px 0;
+    }
+}

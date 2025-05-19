@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './Head.css'
 import logo from '../../assets/images/NetflixLogo.png'
 import SearchIcon from "@mui/icons-material/Search";
@@ -9,7 +9,7 @@ function Header() {
   return (
     <>
       <div className="header_outer">
-        <div className="header_inner">
+        <div  className="header_inner">
           <div className="leftside_nav">
             <ul>
               <li>
