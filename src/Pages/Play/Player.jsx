@@ -39,6 +39,7 @@ console.log(video);
 
   return (
     <>
+   
       <div className="player">
         <img
           src={back_arrow}
@@ -47,20 +48,29 @@ console.log(video);
             navigate("/Netflix_Clone/");
           }}
         />
-        <iframe
-          src={`https://www.youtube.com/embed/${video.key}`}
-          frameborder="0"
-          width="90%"
-          height="90%"
-          title="trailer"
-          allowFullScreen
-        ></iframe>
+        {video?.key ? (
+          <iframe
+            src={`https://www.youtube.com/embed/${video.key}?autoplay=1`}
+            frameBorder="0"
+            width="90%"
+            height="90%"
+            title="trailer"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+        ) : (
+          <div className="video-not-found">
+            <h2>Video not found</h2>
+            <p>Sorry, the trailer for this movie is not available.</p>
+          </div>
+        )}
         <div className="movie_info1">
           <p>Published Date: {PDate?.slice(0, 10)}</p>
           <p>Movie Name: {video.name}</p>
           <p>Type: {video.type}</p>
         </div>
       </div>
+   
     </>
   );
 }

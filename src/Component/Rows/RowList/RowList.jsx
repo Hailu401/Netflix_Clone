@@ -5,14 +5,14 @@ import requests from '../../../Utils/Request';
 
 const RowList = () => {
   return (
-    <div className='row_list'>
+    <div className="row_list">
       <Row
         title="NETFLIX ORGINALS"
-        getData={requests.getNetflixAllMovies}
+        getData={requests.getTrendingMv}
         isLarge={true}
       />
-
-      <Row title="Trending Now" getData={requests.getTrendingMv} />
+      <Row title="Trending Now" getData={requests.getTrending} />
+      <Row title="" getData={requests.getNetflixAllMovies} />
       <Row title="Popular TV Series" getData={requests.getPopularTVSeries} />
       <Row title="Action Movies" getData={requests.getAction} />
       <Row title="Comedy Movies" getData={requests.getComedy} />

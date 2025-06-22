@@ -51,24 +51,26 @@ const opts = {
       <h1>{title}</h1>
       <div className="row_posters">
         {movie?.map((movie, i) => (
-          // <Link to={`/Netflix_Clone/player/${movie.id}`}>
-            <img
-              onClick={() => handleClick(movie)}
-              key={i}
-              src={`${BaseImage_url}${
-                isLarge ? movie?.poster_path : movie?.backdrop_path
-              }`}
-              alt={movie.name}
-              className={`row_poster ${isLarge && "row_posterLarge"}`}
-            />
-
-           
-          // </Link>
+          <div key={i} className="movie_item">
+            <Link to={`/Netflix_Clone/player/${movie.id}`}>
+              <img
+                onClick={() => handleClick(movie)}
+                src={`${BaseImage_url}${
+                  isLarge ? movie?.poster_path : movie?.backdrop_path
+                }`}
+                alt={movie.name}
+                className={`row_poster ${isLarge && "row_posterLarge"}`}
+              />
+            </Link>
+            <div className="movie_name">
+              {movie?.title || movie?.original_name || movie?.name}
+            </div>
+          </div>
         ))}
       </div>
-      <div style={{ padding: "40px" }}>
+      {/* <div style={{ padding: "40px" }}>
         {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
-      </div>
+      </div> */}
     </div>
   );
 }
