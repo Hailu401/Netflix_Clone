@@ -12,6 +12,8 @@ function Home() {
       <RowList/>
       <Footer/>
     </>
+
+    
   )
 }
 
